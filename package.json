@@ -1,8 +1,9 @@
 {
   "name": "rfm9x",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A js module for interacting with adafruit RFM9x Module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -10,14 +11,19 @@
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/patFish/rfm9x.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["rfm9x", "adafruit", "lora"],
+  "author": "patFish",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/patFish/rfm9x/issues"
