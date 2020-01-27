@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/patFish/rfm9x/issues"
   },
-  "homepage": "https://github.com/patFish/rfm9x#readme"
+  "homepage": "https://github.com/patFish/rfm9x#readme",
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  }
 }
