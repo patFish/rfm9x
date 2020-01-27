@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -22,7 +24,10 @@
   },
   "homepage": "https://github.com/patFish/rfm9x#readme",
   "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1",
+    "ts-jest": "^25.0.0",
     "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.5"
